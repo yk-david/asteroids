@@ -19,6 +19,7 @@ def main():
             if event.type == pygame.QUIT:
                 return
         # Drawing game stage: order matters.
+        player.update(dt)
         pygame.Surface.fill(screen, color="black")
         player.draw(screen)
         pygame.display.flip()
